@@ -1,0 +1,63 @@
+
+/* ---------- index.html ---------- */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4 Column Feedback Form</title>
+  <!-- Bootstrap 4 CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container py-5">
+  <h2 class="text-center mb-4">Customer Feedback Form</h2>
+  <form id="feedbackForm" class="needs-validation form-section" novalidate>
+    <div class="form-row">
+      <!-- Column 1: User ID -->
+      <div class="form-group col-md-3">
+        <label for="userId">User ID</label>
+        <input type="text" class="form-control" id="userId" name="userId" placeholder="Enter User ID" required>
+        <div class="invalid-feedback">
+          Please provide your User ID.
+        </div>
+      </div>
+
+      <!-- Column 2: Password -->
+      <div class="form-group col-md-3">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" required>
+        <div class="invalid-feedback">
+          Please provide a password.
+        </div>
+      </div>
+
+      <!-- Column 3: Feedback -->
+      <div class="form-group col-md-4">
+        <label for="feedback">Customer Feedback</label>
+        <textarea class="form-control" id="feedback" name="feedback" rows="3" placeholder="Write your feedback..." required></textarea>
+        <div class="invalid-feedback">
+          Feedback cannot be empty.
+        </div>
+      </div>
+
+      <!-- Column 4: Submit Button -->
+      <div class="form-group col-md-2 d-flex align-items-end">
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+      </div>
+    </div>
+  </form>
+  <div id="alertPlaceholder"></div>
+</div>
+
+<!-- jQuery, Popper.js, Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom Script -->
+<script src="app.js"></script>
+</body>
+</html>
+
