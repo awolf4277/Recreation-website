@@ -31,7 +31,6 @@ function toggleCarouselAutoplay() {
 }
 
 // 3. Highlight cards on hover
-function highlightCards() {
 document.querySelectorAll(".card").forEach(card => {
   card.addEventListener("mouseover", () => {
     card.classList.add("shadow-lg");
@@ -41,7 +40,7 @@ document.querySelectorAll(".card").forEach(card => {
     card.classList.remove("shadow-lg");
     card.style.transform = "scale(1)";
   });
-});}
+});
 
 // 4. Theme Toggle (Dark/Light)
 function toggleTheme() {
@@ -50,6 +49,4 @@ function toggleTheme() {
   body.classList.toggle("text-white");
   alert("Theme switched!");
 }
-
-
 
